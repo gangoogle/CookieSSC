@@ -22,14 +22,15 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorMain"
-                android:orientation="horizontal"
+                android:background="@color/colorAccent"
                 android:padding="5dp">
 
                 <TextView
+                    android:id="@+id/tv_title_num"
+                    android:layout_centerVertical="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="期号："
@@ -37,13 +38,25 @@
                     android:textSize="16sp"/>
 
                 <TextView
+                    android:layout_toRightOf="@id/tv_title_num"
+                    android:layout_centerVertical="true"
                     android:id="@+id/tv_odd_number"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="20171228-053"
                     android:textColor="@color/white"
                     android:textSize="16sp"/>
-            </LinearLayout>
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2017-12-28 14:40:40"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"/>
+            </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -96,12 +109,6 @@
                     android:textStyle="bold"/>
             </LinearLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="10dp"
-                android:background="@color/ub_gray"
-                />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -110,20 +117,14 @@
                 android:orientation="horizontal"
                 android:padding="5dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="时间："
-                    android:textColor="@color/ub_gray_a"
-                    android:textSize="12sp"/>
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="时间："-->
+                    <!--android:textColor="@color/ub_gray_a"-->
+                    <!--android:textSize="12sp"/>-->
 
-                <TextView
-                    android:id="@+id/tv_time"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="2017-12-28 14:40:40"
-                    android:textColor="@color/ub_gray_a"
-                    android:textSize="12sp"/>
+
             </LinearLayout>
         </LinearLayout>
 

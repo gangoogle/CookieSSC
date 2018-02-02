@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#b8152d</color>
-    <color name="colorPrimaryDark">#b8152d</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#21abca</color>
+    <color name="colorPrimaryDark">#21abca</color>
+    <color name="colorAccent">#21abca</color>
     <color name="colorMain">#7CCD7C</color>
     <color name="colorRedMain">#b8152d</color>
 
@@ -170,4 +170,13 @@
     <color name="mdWhite">#fafafa</color>
 
     <color name="black_overlay">#66000000</color>
+
+    <color name="colorDeepBlue">#6275ba</color>
+    <color name="colorWhite2">#ebebeb</color>
+    <color name="colorViolet2">#66ffffff</color>
+    <color name="colorViolet3">#91bbc4e1</color>
+    <color name="colorGreen1">#a112fdea</color>
+    <color name="colorDarkB">#666666</color>
+    <color name="colorGrayB">#999999</color>
+    <color name="uberBlue">#21abca</color>
 </resources>

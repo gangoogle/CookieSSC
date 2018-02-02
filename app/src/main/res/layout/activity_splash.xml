@@ -3,7 +3,7 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              android:background="@mipmap/bg_splash_1080_a"
-             tools:context="com.butter.butterssc.ui.activity.SplashActivity">
+             tools:context="com.butter.cookiessc.ui.activity.SplashActivity">
 
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,

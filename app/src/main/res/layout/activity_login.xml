@@ -2,13 +2,12 @@
               xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="#0a0813"
               android:gravity="center_horizontal"
               android:orientation="vertical"
               android:paddingBottom="@dimen/activity_vertical_margin"
-              android:paddingLeft="@dimen/activity_horizontal_margin"
-              android:paddingRight="@dimen/activity_horizontal_margin"
               android:paddingTop="@dimen/activity_vertical_margin"
-              tools:context="com.butter.butterssc.ui.activity.LoginActivity">
+              tools:context="com.butter.cookiessc.ui.activity.LoginActivity">
 
     <!-- Login progress -->
     <ProgressBar
@@ -36,13 +35,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginBottom="20dp"
-                android:text="用户登陆"
-                android:textColor="@color/card_title_a"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="登陆"
+                android:textColor="@color/white"
                 android:textSize="18sp"/>
 
             <android.support.design.widget.TextInputLayout
+                android:paddingTop="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="@color/white">
 
                 <AutoCompleteTextView
                     android:id="@+id/email"
@@ -51,13 +54,15 @@
                     android:hint="@string/prompt_email"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
-                    android:singleLine="true"/>
+                    android:singleLine="true"
+                    android:textColor="@color/card_title_a"/>
 
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="@color/white">
 
                 <EditText
                     android:id="@+id/password"
@@ -69,7 +74,8 @@
                     android:imeOptions="actionUnspecified"
                     android:inputType="textPassword"
                     android:maxLines="1"
-                    android:singleLine="true"/>
+                    android:singleLine="true"
+                    android:textColor="@color/card_title_a"/>
 
             </android.support.design.widget.TextInputLayout>
 
@@ -78,22 +84,27 @@
                 style="?android:textAppearanceSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
                 android:layout_marginTop="16dp"
-                android:background="@color/blue"
+                android:background="@color/uberBlue"
                 android:text="@string/action_sign_in"
                 android:textColor="@color/white"
                 />
 
             <TextView
-                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="基于Google Material Design 开放许可"/>
+                android:layout_marginTop="10dp"
+                android:text="基于Google Material Design 开放许可"
+                android:textColor="@color/uberBlue"/>
+
             <TextView
-                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="快三专业分析v1.10"/>
+                android:layout_marginTop="10dp"
+                android:text="快三专业分析v1.10"
+                android:textColor="@color/uberBlue"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

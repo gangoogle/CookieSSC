@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.butter.butterssc.ui.activity.TrendDetailActivity"
+    tools:context="com.butter.cookiessc.ui.activity.TrendDetailActivity"
    >
 
     <LinearLayout
@@ -17,7 +17,7 @@
             android:id="@+id/ll_status_t"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@color/colorRedMain"
+            android:background="@color/colorAccent"
             >
 
             <TextView
@@ -31,12 +31,10 @@
                 android:textSize="18sp"/>
         </LinearLayout>
 
-
-        <com.butter.butterssc.customview.DelayLoadJsWebView
-            android:id="@+id/webview"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            ></com.butter.butterssc.customview.DelayLoadJsWebView>
+       <include
+           layout="@layout/fragment_indicator_show"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"/>
     </LinearLayout>
 
 

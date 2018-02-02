@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">快三专业分析</string>
-    <string name="title_home">开奖趋势</string>
-    <string name="title_dashboard">新闻</string>
-    <string name="title_notifications">实时开奖</string>
+    <string name="app_name">小饼干</string>
+    <string name="title_home">分析</string>
+    <string name="title_dashboard">地图</string>
+    <string name="title_notifications">新开</string>
 
     <string name="title_activity_splash">SplashActivity</string>
     <string name="dummy_button">Dummy Button</string>

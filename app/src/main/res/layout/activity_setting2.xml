@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.butter.butterssc.ui.activity.SettingActivity2">
+    tools:context="com.butter.cookiessc.ui.activity.SettingActivity2">
 
 
     <RelativeLayout
@@ -16,7 +16,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@mipmap/ba_ball"/>
+            android:background="@mipmap/banner_spring_jpg"/>
 
         <LinearLayout
             android:layout_width="match_parent"

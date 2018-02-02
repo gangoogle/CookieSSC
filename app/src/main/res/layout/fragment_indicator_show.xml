@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/tv_date_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/ll_date_select"
+            android:layout_marginRight="25dp"
+            android:layout_toLeftOf="@id/ll_date_select"
+            android:text=""
+            android:textColor="@color/colorViolet2"
+            android:textSize="13sp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_date_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_occu_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/tv_occu_rate_value"
+            android:text="出注率"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_occu_rate_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/tv_occu_rate_p"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="33sp"/>
+
+        <TextView
+            android:id="@+id/tv_occu_rate_p"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_occu_rate_value"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="25dp"
+            android:text="%"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/tv_comp_forecast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_occu_rate"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:text="相比预测"
+            android:textColor="@color/white"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/tv_comp_forecast_percent_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_comp_forecast"
+            android:layout_alignLeft="@id/tv_occu_rate_value"
+            android:layout_alignParentBottom="true"
+            android:text=""
+            android:textColor="@color/colorViolet3"
+            android:textSize="13sp"/>
+
+        <View
+            android:id="@+id/view_center"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+
+        <com.butter.cookiessc.ui.view.ArchPercentView
+            android:id="@+id/ap_budget"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/view_center"/>
+
+        <TextView
+            android:id="@+id/tv_budget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_comp_forecast"
+            android:layout_alignLeft="@+id/ap_budget"
+            android:text="预算"
+            android:textColor="@color/white"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_room_night_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_budget"
+            android:layout_marginLeft="40dp"
+            android:layout_toRightOf="@+id/tv_budget"
+            android:text=""
+            android:textColor="@color/colorGreen1"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+    <ListView
+        android:padding="10dp"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"></ListView>
+</LinearLayout>
