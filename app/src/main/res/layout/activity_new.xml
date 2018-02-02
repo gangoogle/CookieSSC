@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.butter.cookiessc.ui.activity.NewActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorAccent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="这是一个标题栏"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+
+    <com.butter.cookiessc.v2.ui.view.FreeViewPager
+        android:id="@+id/vp_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:id="@+id/ll_tool"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="#4b4a5a"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/rl_overview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/iv_overview"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:src="@drawable/selector_navi_overview"/>
+
+            <TextView
+                android:id="@+id/tv_overview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_overview"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="概览"
+                android:textColor="@drawable/selector_navi_text"
+                android:textSize="11sp"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_me"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/iv_me"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:src="@drawable/selector_navi_me"/>
+
+            <TextView
+                android:id="@+id/tv_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_me"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="我"
+                android:textColor="@drawable/selector_navi_text"
+                android:textSize="11sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

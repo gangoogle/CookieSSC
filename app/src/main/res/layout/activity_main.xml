@@ -38,6 +38,7 @@
     </RelativeLayout>
 
     <com.butter.cookiessc.customview.NoScrollViewPager
+        android:layout_marginBottom="50dp"
         android:id="@+id/view_pager"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -51,7 +52,7 @@
         android:id="@+id/navigation"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="?android:attr/windowBackground"
+        android:background="#4b4a5a"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -2,6 +2,7 @@ package com.butter.cookiessc.ui.view
 
 import android.content.Context
 import android.os.Bundle
+import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import android.view.View
@@ -26,7 +27,7 @@ class TrendView(context: Context,val abundle: Bundle?) : BaseHomeView(context,ab
 
     override fun initData() {
         Log.d("yzg","trend view initData")
-        mView?.rv_view?.layoutManager = LinearLayoutManager(context)
+        mView?.rv_view?.layoutManager =  GridLayoutManager(context, 2)
         mView?.rv_view?.adapter = RCTrendAdapter(context, getTrendItemData())
 
     }

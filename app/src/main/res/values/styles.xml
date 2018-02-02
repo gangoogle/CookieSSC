@@ -35,4 +35,8 @@
         <item name="windowNoTitle">true</item>
         <item name="android:windowFullscreen">false</item>
     </style>
+    <style name="FilterLayoutPopAnimStyle">
+        <item name="android:windowEnterAnimation">@anim/anim_filter_pop_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_filter_pop_out</item>
+    </style>
 </resources>

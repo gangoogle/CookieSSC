@@ -17,6 +17,7 @@
         app:cardElevation="5dp">
 
         <LinearLayout
+            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -30,7 +31,7 @@
                 android:src="@mipmap/ic_shuangseqiu"/>
 
             <LinearLayout
-                android:layout_margin="20dp"
+                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -45,16 +46,17 @@
                     android:textColor="@color/white"
                     android:textSize="16sp"/>
 
-                <TextView
-                    android:id="@+id/tv_date"
-                    android:layout_marginBottom="2dp"
-                    android:layout_marginLeft="20dp"
-                    android:textColor="@color/white"
-                    android:text="2018-1-23"
-                    android:textSize="12sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
             </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/tv_date"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/white"
+                android:text="2018-1-23"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
     </android.support.v7.widget.CardView>
 

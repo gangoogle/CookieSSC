@@ -7,6 +7,8 @@ import android.os.Handler
 import android.os.Message
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.text.format.DateUtils
+import android.view.View
 import com.butter.cookiessc.R
 import com.butter.cookiessc.adapter.PerfTargetAdapter
 import com.butter.cookiessc.data.getTrendDetailData
@@ -50,6 +52,9 @@ class TrendDetailActivity : AppCompatActivity() {
                     ap_budget.setPercent(item?.archPercent!!)
                     tv_occu_rate_value.setText("${item?.occuRate}")
                     tv_comp_forecast_percent_value.setText("${item?.forceasRate}")
+                    tv_room_night_value.setText("${item?.budgetMoney}")
+                    tv_date_detail.setText("昨日：${ComUtils.getYesterday(Date())}")
+                    tv_occu_rate_p.visibility = View.VISIBLE
                     list_view.adapter = PerfTargetAdapter(mContext, item.linePercent)
                 }
             }
