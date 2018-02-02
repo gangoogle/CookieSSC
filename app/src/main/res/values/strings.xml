@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">小饼干</string>
+    <string name="app_name">重庆时时彩开奖</string>
     <string name="title_home">分析</string>
     <string name="title_dashboard">地图</string>
     <string name="title_notifications">新开</string>
@@ -67,7 +67,7 @@
         <item>3</item>
     </string-array>
 
-    <string-array name="multi_select_list_preference_default_value"/>
+    <string-array name="multi_select_list_preference_default_value" />
 
     <string name="pref_title_system_sync_settings">System sync settings</string>
 

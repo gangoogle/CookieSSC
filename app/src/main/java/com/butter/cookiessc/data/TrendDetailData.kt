@@ -35,7 +35,7 @@ fun getTrendDetailData(): Map<String, TrendDetailItem> {
                             LinePercentData("四等奖",58,false),
                             LinePercentData("五等奖",50,false),
                             LinePercentData("六等奖",160,false)
-                    )),
+                    ),23,141,426,645,385,621),
             "fc3d" to TrendDetailItem(62025400f,25f,20f,32f,
                     listOf(
                             LinePercentData("一等奖",12,false),

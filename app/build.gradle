@@ -9,13 +9,14 @@ android {
     defaultConfig {
         applicationId "com.butter.cookiessc"
         minSdkVersion 14
-        targetSdkVersion 22
+        targetSdkVersion 19
         versionCode 1
         versionName "1.10"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
         ndk {
             abiFilters "armeabi"
+            abiFilters "x86"
         }
     }
     buildTypes {
@@ -51,4 +52,5 @@ dependencies {
     compile 'org.greenrobot:eventbus:3.0.0'
     implementation files('libs/AMap2DMap_5.2.0_AMapSearch_5.7.0_20171229.jar')
     implementation files('libs/AMap_Location_V3.7.0_20171218.jar')
+    implementation files('libs/android-mastersdk-1.16.jar')
 }

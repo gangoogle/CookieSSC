@@ -46,7 +46,7 @@
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            app:srcCompat="@drawable/ic_face_black_24dp"/>
+            app:srcCompat="@drawable/ic_account_circle_black_24dp"/>
 
         <TextView
             android:id="@+id/tv_user_eamil"
@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
-            android:text="账号功能即将推出"
+            android:text=""
             android:textColor="@color/card_title_a"
             android:textSize="16sp"/>
 
@@ -115,45 +115,6 @@
         android:background="@color/linen"/>
 
     <LinearLayout
-        android:id="@+id/ll_collection"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:padding="5dp">
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="30dp"
-            app:srcCompat="@drawable/ic_favorite_border_black_24dp"/>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_weight="1"
-            android:text="我的收藏"
-            android:textColor="@color/card_title_a"
-            android:textSize="16sp"/>
-
-        <TextView
-            android:id="@+id/tv_collection"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:layout_weight="0"
-            android:text="0"
-            android:textColor="@color/card_title_a"/>
-    </LinearLayout>
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginLeft="50dp"
-        android:background="@color/linen"/>
-
-    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -186,6 +147,45 @@
             android:text="开"
             android:textColor="@color/card_title_a"/>
     </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="50dp"
+        android:background="@color/linen"/>
+    <LinearLayout
+        android:id="@+id/ll_collection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/ic_favorite_border_black_24dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="我的收藏"
+            android:textColor="@color/card_title_a"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_collection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0"
+            android:text="0"
+            android:textColor="@color/card_title_a"/>
+    </LinearLayout>
+
 
     <ImageView
         android:layout_width="match_parent"

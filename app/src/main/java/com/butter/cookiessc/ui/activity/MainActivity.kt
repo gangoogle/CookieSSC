@@ -79,6 +79,9 @@ class MainActivity : AppCompatActivity() {
         iv_info.setOnClickListener {
             startActivity(Intent(mContext, SettingActivity2::class.java))
         }
+        iv_news.setOnClickListener {
+            startActivity(Intent(mContext, NewsListActivity::class.java))
+        }
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)

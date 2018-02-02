@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
@@ -9,54 +8,73 @@
     tools:context="com.butter.cookiessc.ui.activity.MainActivity"
     tools:layout_editor_absoluteY="25dp">
 
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+
+        android:background="#e3e8ec"
+        app:layout_constraintTop_toTopOf="@+id/ll_status"
+        app:menu="@menu/navigation">
+
+
+    </android.support.design.widget.BottomNavigationView>
+
     <RelativeLayout
         android:id="@+id/ll_status"
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_height="0dp"
         android:background="@color/colorAccent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:layout_centerInParent="true"
             android:id="@+id/tv_title"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_centerInParent="true"
             android:gravity="center"
             android:text="趋势"
             android:textColor="@color/white"
-            android:textSize="18sp"/>
-        <ImageView
-            android:id="@+id/iv_info"
-            android:layout_marginRight="10dp"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:src="@drawable/ic_settings_black_24dp"
-            android:layout_width="30dp"
-            android:layout_height="30dp"/>
+            android:textSize="18sp" />
+
+
     </RelativeLayout>
 
     <com.butter.cookiessc.customview.NoScrollViewPager
-        android:layout_marginBottom="50dp"
         android:id="@+id/view_pager"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/card_title"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ll_status"></com.butter.cookiessc.customview.NoScrollViewPager>
+        app:layout_constraintTop_toBottomOf="@+id/navigation"
+        app:layout_constraintVertical_bias="0.0"></com.butter.cookiessc.customview.NoScrollViewPager>
 
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/navigation"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="#4b4a5a"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/navigation"
-        />
+    <ImageView
+        android:id="@+id/iv_info"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="50dp"
+        android:src="@drawable/ic_settings_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_pager"
+        app:layout_constraintEnd_toEndOf="@+id/view_pager" />
 
+    <ImageView
+        android:id="@+id/iv_news"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_dashboard_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_pager"
+        app:layout_constraintEnd_toStartOf="@+id/iv_info" />
 </android.support.constraint.ConstraintLayout>
