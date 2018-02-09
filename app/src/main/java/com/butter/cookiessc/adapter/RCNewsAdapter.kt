@@ -31,6 +31,7 @@ class RCNewsAdapter(val context: Context, val newsArray: ArrayList<NewsResponse.
             intent.putExtra("title", newsArray[position].title)
             intent.putExtra("src", newsArray[position].src)
             intent.putExtra("time", newsArray[position].time)
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             context.startActivity(intent)
         }
     }
