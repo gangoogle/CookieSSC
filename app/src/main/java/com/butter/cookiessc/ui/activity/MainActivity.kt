@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
+import android.widget.Toast
 import com.butter.cookiessc.R
 import com.butter.cookiessc.adapter.HomeViewPagerAdapter
 import com.butter.cookiessc.data.getHomeTitleData
@@ -46,6 +47,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        Toast.makeText(this,"123456789",Toast.LENGTH_SHORT).show()
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
         mContext = this
         EventBus.getDefault().register(this)

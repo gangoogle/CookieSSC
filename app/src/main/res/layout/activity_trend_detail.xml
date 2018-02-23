@@ -26,15 +26,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="球球走势"
+                android:text="测试---"
                 android:textColor="@color/white"
                 android:textSize="18sp"/>
         </LinearLayout>
 
-       <include
-           layout="@layout/fragment_indicator_show"
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"/>
+        <include
+            layout="@layout/fragment_indicator_show"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </LinearLayout>
 
 
