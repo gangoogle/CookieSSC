@@ -101,20 +101,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="90dp"
                 android:text="基于Google Material Design 开放许可"
-                android:textColor="@color/uberBlue"/>
+                android:textColor="@color/black"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="开彩宝典v1.10"
-                android:textColor="@color/uberBlue"/>
+                android:text="时时彩-玩彩票"
+                android:textColor="@color/black"/>
             <TextView
                 android:textSize="12dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="大数据 趋势分析"
+                android:text=""
                 android:textColor="@color/black"/>
         </LinearLayout>
     </ScrollView>

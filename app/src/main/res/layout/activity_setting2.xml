@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context="com.butter.cookiessc.ui.activity.SettingActivity2">
 
 
@@ -15,12 +16,14 @@
 
 
         <LinearLayout
+            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <ImageView
+                android:visibility="gone"
                 android:id="@+id/iv_back"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
@@ -70,11 +73,6 @@
 
     </LinearLayout>
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginLeft="50dp"
-        android:background="@color/linen"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -108,11 +106,6 @@
             android:textColor="@color/red"/>
     </LinearLayout>
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginLeft="50dp"
-        android:background="@color/linen"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -148,11 +141,7 @@
             android:textColor="@color/card_title_a"/>
     </LinearLayout>
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginLeft="50dp"
-        android:background="@color/linen"/>
+
     <LinearLayout
         android:id="@+id/ll_collection"
         android:layout_width="match_parent"
@@ -187,11 +176,7 @@
     </LinearLayout>
 
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginLeft="50dp"
-        android:background="@color/linen"/>
+
 
     <LinearLayout
         android:id="@+id/ll_suggest"
@@ -223,11 +208,7 @@
             app:srcCompat="@drawable/ic_send_black_24dp"/>
     </LinearLayout>
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginLeft="50dp"
-        android:background="@color/linen"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -259,7 +240,7 @@
             android:layout_marginRight="10dp"
             android:layout_weight="0"
             android:padding="4dp"
-            android:text="v1.10(最新版本)"
+            android:text="v7.0(最新版本)"
             android:textColor="@color/gray"
             android:textSize="12sp"
             tools:ignore="DuplicateIds"/>

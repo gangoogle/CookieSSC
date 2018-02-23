@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">时时彩开奖分析</string>
+    <string name="app_name">时时彩-玩彩票</string>
     <string name="title_home">分析</string>
-    <string name="title_dashboard">地图</string>
+    <string name="title_dashboard">新闻</string>
     <string name="title_notifications">新开</string>
+    <string name="title_setting">设置</string>
 
     <string name="title_activity_splash">SplashActivity</string>
     <string name="dummy_button">Dummy Button</string>

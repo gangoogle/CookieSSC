@@ -9,5 +9,6 @@ import com.butter.cookiessc.model.HomeTitle
 fun getHomeTitleData(): List<HomeTitle> {
     return listOf(HomeTitle("分析", R.color.colorAccent),
             HomeTitle("地图", R.color.cadetblue),
-            HomeTitle("新开", R.color.olivedrab))
+            HomeTitle("新开", R.color.olivedrab),
+            HomeTitle("设置", R.color.olivedrab))
 }

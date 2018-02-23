@@ -12,10 +12,7 @@ import com.butter.cookiessc.R
 import com.butter.cookiessc.adapter.HomeViewPagerAdapter
 import com.butter.cookiessc.data.getHomeTitleData
 import com.butter.cookiessc.model.FinishEvent
-import com.butter.cookiessc.ui.view.BaseHomeView
-import com.butter.cookiessc.ui.view.LotteryView
-import com.butter.cookiessc.ui.view.NewsView
-import com.butter.cookiessc.ui.view.TrendView
+import com.butter.cookiessc.ui.view.*
 import kotlinx.android.synthetic.main.activity_main.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
@@ -40,6 +37,10 @@ class MainActivity : AppCompatActivity() {
                 view_pager.setCurrentItem(2, true)
                 return@OnNavigationItemSelectedListener true
             }
+            R.id.navigation_setting ->{
+                view_pager.setCurrentItem(3,true)
+                return@OnNavigationItemSelectedListener true
+            }
         }
         false
     }
@@ -47,14 +48,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Toast.makeText(this,"123456789",Toast.LENGTH_SHORT).show()
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
         mContext = this
         EventBus.getDefault().register(this)
         mViews = listOf(TrendView(mContext, savedInstanceState), NewsView(mContext, savedInstanceState),
-                LotteryView(mContext, savedInstanceState))
+                LotteryView(mContext, savedInstanceState),SettingView(mContext,savedInstanceState))
         mHomeViewAdapter = HomeViewPagerAdapter(mContext, mViews)
-        view_pager.offscreenPageLimit = 4
+        view_pager.offscreenPageLimit = 5
         view_pager.adapter = mHomeViewAdapter
         mViews[0].loadData()
         view_pager.setOnPageChangeListener(object : ViewPager.OnPageChangeListener {
@@ -69,6 +69,7 @@ class MainActivity : AppCompatActivity() {
                     0 -> navigation.selectedItemId = R.id.navigation_home
                     1 -> navigation.selectedItemId = R.id.navigation_dashboard
                     2 -> navigation.selectedItemId = R.id.navigation_notifications
+                    3 ->navigation.selectedItemId = R.id.navigation_setting
                 }
                 mViews[position].loadData()
                 tv_title.text = getHomeTitleData()[position].title
@@ -78,12 +79,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         })
-        iv_info.setOnClickListener {
-            startActivity(Intent(mContext, SettingActivity2::class.java))
-        }
-        iv_news.setOnClickListener {
-            startActivity(Intent(mContext, NewsListActivity::class.java))
-        }
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
