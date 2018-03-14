@@ -1,5 +1,6 @@
 package com.butter.cookiessc.ui.activity
 
+import android.content.Context
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.Snackbar
@@ -13,16 +14,16 @@ import com.butter.cookiessc.model.response.NewsResponse
 import com.butter.cookiessc.net.Api
 import com.butter.cookiessc.net.RetrofitNetHelper
 import com.butter.cookiessc.ui.view.MyProgressDialog
-import com.tencent.bugly.crashreport.inner.InnerAPI.context
 import kotlinx.android.synthetic.main.activity_news_list.*
 
 class NewsListActivity : AppCompatActivity() {
 
     lateinit var dialog: MyProgressDialog
-
+    lateinit var context: Context
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_news_list)
+        context = this
         dialog = MyProgressDialog(this)
         iv_back.setOnClickListener { finish() }
         initData()

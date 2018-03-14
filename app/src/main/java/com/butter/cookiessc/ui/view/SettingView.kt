@@ -21,7 +21,6 @@ import com.butter.cookiessc.ui.activity.CollectionActivity
 import com.butter.cookiessc.ui.activity.FeedBackActivity
 import com.butter.cookiessc.ui.activity.LoginActivity
 import com.butter.cookiessc.utils.ComUtils
-import com.tencent.bugly.crashreport.inner.InnerAPI
 import kotlinx.android.synthetic.main.activity_setting2.view.*
 import org.greenrobot.eventbus.EventBus
 

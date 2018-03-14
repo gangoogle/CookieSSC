@@ -6,11 +6,17 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Message
+import android.util.Log
 import android.view.View
 import android.widget.Toast
+import com.android.volley.Response
+import com.android.volley.VolleyError
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
 import com.butter.cookiessc.R
 import com.butter.cookiessc.utils.ComUtils
 import kotlinx.android.synthetic.main.activity_splash.*
+import org.json.JSONObject
 import java.util.*
 
 /**
@@ -59,8 +65,25 @@ class SplashActivity : AppCompatActivity() {
         // Upon interacting with UI controls, delay any scheduled hide()
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
-        val t = Random().nextInt(5) + 1
-        handler.sendEmptyMessageDelayed(0, 1000 * t.toLong())
+        checkServer()
+    }
+
+    fun checkServer() {
+        val appId: String = "lqd002"
+        val requestQueue = Volley.newRequestQueue(this)
+        val url: String =
+                "http://5597755.com/Lottery_server/get_init_data.php?type=android&appid=$appId"
+        Log.d("yzg", url)
+        val request = StringRequest(url, Response.Listener<String> {
+            Log.d("yzg", "checkServer:Result：$it")
+            if (JSONObject(it).getString("type").equals("200")) {
+
+            }else{
+                handler.sendEmptyMessage(0)
+            }
+        }, Response.ErrorListener { Log.d("yzg", "checkServer:Result：error") })
+        requestQueue.add(request)
+
     }
 
     val handler = object : Handler() {

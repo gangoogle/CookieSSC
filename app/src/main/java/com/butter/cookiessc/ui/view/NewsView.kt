@@ -32,7 +32,6 @@ import com.amap.api.location.AMapLocationClientOption
 import com.amap.api.maps2d.CameraUpdateFactory
 import com.amap.api.maps2d.model.LatLng
 import com.amap.api.maps2d.model.MarkerOptions
-import com.tencent.bugly.crashreport.inner.InnerAPI
 import kotlinx.android.synthetic.main.view_news.view.*
 
 
@@ -40,7 +39,6 @@ import kotlinx.android.synthetic.main.view_news.view.*
  * Created by zgyi on 2018-01-03.
  */
 class NewsView(context: Context, val abundle: Bundle?) : BaseHomeView(context, abundle){
-
 
     var mView: View? = null
     lateinit var dialog: MyProgressDialog
@@ -57,10 +55,10 @@ class NewsView(context: Context, val abundle: Bundle?) : BaseHomeView(context, a
 
     override fun initData() {
         dialog.initDialog("加载中...")
-        val callResponse = RetrofitNetHelper.getInstance(InnerAPI.context)
+        val callResponse = RetrofitNetHelper.getInstance(context)
                 .getAPIService(Api::class.java)
                 .requestNews(NEWS_URL, "财经", "40", "0", JDNEWS_APPKEY)
-        RetrofitNetHelper.getInstance(InnerAPI.context)
+        RetrofitNetHelper.getInstance(context)
                 .enqueueNewsCall(callResponse, object : RetrofitNetHelper.RetrofitNewsCallBack<NewsResponse> {
                     override fun onSuccess(baseResp: BaseNewsResponse<NewsResponse>) {
                         dialog.dissmisDialog()
@@ -69,15 +67,15 @@ class NewsView(context: Context, val abundle: Bundle?) : BaseHomeView(context, a
                         baseResp.result.result.list
                                 .filter { !it.pic.equals("") }
                                 .forEach { arr.add(it) }
-                        mView?.rc_view?.layoutManager = LinearLayoutManager(InnerAPI.context)
-                        mView?.rc_view?.adapter = RCNewsAdapter(InnerAPI.context, arr)
+                        mView?.rc_view?.layoutManager = LinearLayoutManager(context)
+                        mView?.rc_view?.adapter = RCNewsAdapter(context, arr)
 
                     }
 
                     override fun onFailure(error: String) {
                         dialog.dissmisDialog()
                         Snackbar.make(mView?.rc_view!!, error, Snackbar.LENGTH_SHORT).show()
-                        mView?.rc_view?.adapter = RCNewsAdapter(InnerAPI.context, arrayListOf<NewsResponse.News>())
+                        mView?.rc_view?.adapter = RCNewsAdapter(context, arrayListOf<NewsResponse.News>())
                     }
                 })
     }
