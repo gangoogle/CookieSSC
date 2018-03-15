@@ -7,6 +7,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.butter.cookiessc.ui.activity.MainLotteryActivity;
+import com.butter.cookiessc.ui.activity.SplashActivity;
+
 import org.json.JSONObject;
 
 import java.util.logging.Logger;
@@ -42,7 +45,6 @@ public class MyReceiver extends BroadcastReceiver {
 
         } else if (JPushInterface.ACTION_NOTIFICATION_OPENED.equals(intent.getAction())) {
             Log.d(TAG, "用户点击打开了通知");
-
             openNotification(context,bundle);
 
         } else {
@@ -75,10 +77,10 @@ public class MyReceiver extends BroadcastReceiver {
 //            mIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 //            context.startActivity(mIntent);
 //        } else if (TYPE_ANOTHER.equals(myValue)){
-//            Intent mIntent = new Intent(context, AnotherActivity.class);
-//            mIntent.putExtras(bundle);
-//            mIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//            context.startActivity(mIntent);
+            Intent mIntent = new Intent(context, SplashActivity.class);
+            mIntent.putExtras(bundle);
+            mIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(mIntent);
 //        }
     }
 }

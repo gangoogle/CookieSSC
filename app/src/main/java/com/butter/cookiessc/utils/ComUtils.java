@@ -20,6 +20,7 @@ import java.util.Date;
 public class ComUtils {
 
 
+
     public static User getLoginInfo(Context ctx) {
         User user = new User("", "");
         try {

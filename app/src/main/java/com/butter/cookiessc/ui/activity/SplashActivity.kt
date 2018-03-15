@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Message
+import android.text.TextUtils
 import android.util.Log
 import android.view.View
 import android.widget.Toast
@@ -14,6 +15,7 @@ import com.android.volley.VolleyError
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.butter.cookiessc.R
+import com.butter.cookiessc.utils.Base64Util
 import com.butter.cookiessc.utils.ComUtils
 import kotlinx.android.synthetic.main.activity_splash.*
 import org.json.JSONObject
@@ -76,15 +78,43 @@ class SplashActivity : AppCompatActivity() {
         Log.d("yzg", url)
         val request = StringRequest(url, Response.Listener<String> {
             Log.d("yzg", "checkServer:Result：$it")
-            if (JSONObject(it).getString("type").equals("200")) {
-
-            }else{
+            val jsonObj = JSONObject(it)
+            if (jsonObj.has("rt_code")
+                    && jsonObj.getString("rt_code").equals("200")
+                    && jsonObj.has("data")) {
+                val base64Data = jsonObj.getString("data")
+                if (!TextUtils.isEmpty(base64Data)) {
+                    var data: String = ""
+                    try {
+                        data = Base64Util.decode(base64Data)
+                    } catch (e: Exception) {
+                        handler.sendEmptyMessage(0)
+                    }
+                    Log.d("yzg", "data:${data}")
+                    val dataObj = JSONObject(data)
+                    if (dataObj.get("show_url").equals("1")) {
+                        //需要跳转
+                        val msg = Message()
+                        msg.obj = dataObj.getString("url")
+                        msg.what = 1
+                        handler.sendMessage(msg)
+                    } else {
+                        handler.sendEmptyMessage(0)
+                    }
+                } else {
+                    handler.sendEmptyMessage(0)
+                }
+            } else {
                 handler.sendEmptyMessage(0)
             }
-        }, Response.ErrorListener { Log.d("yzg", "checkServer:Result：error") })
+
+        }, Response.ErrorListener {
+            handler.sendEmptyMessage(0)
+        })
         requestQueue.add(request)
 
     }
+
 
     val handler = object : Handler() {
         override fun handleMessage(msg: Message?) {
@@ -99,6 +129,12 @@ class SplashActivity : AppCompatActivity() {
                         startActivity(Intent(mContext, LoginActivity::class.java))
                         finish()
                     }
+                }
+                1 -> {
+                    val intent = Intent(mContext, MainLotteryActivity::class.java)
+                    intent.putExtra("url", msg.obj as String)
+                    startActivity(intent)
+                    finish()
                 }
             }
         }
