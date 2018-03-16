@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context="com.butter.cookiessc.ui.activity.SettingActivity2">
+    tools:context="com.butter.cookiea.ui.activity.SettingActivity2">
 
 
     <RelativeLayout

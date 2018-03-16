@@ -197,7 +197,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@color/colorAccent">
+        android:background="@color/card_title">
 
         <TextView
             android:id="@+id/tv_date_detail"
@@ -286,7 +286,7 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"/>
 
-        <com.butter.cookiessc.ui.view.ArchPercentView
+        <com.butter.cookiea.ui.view.ArchPercentView
             android:id="@+id/ap_budget"
             android:layout_width="120dp"
             android:layout_height="120dp"

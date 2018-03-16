@@ -10,7 +10,7 @@
     android:paddingLeft="15dp"
     android:paddingRight="15dp"
     android:paddingTop="15dp"
-    tools:context="com.butter.cookiessc.ui.activity.NewsDetailActivity">
+    tools:context="com.butter.cookiea.ui.activity.NewsDetailActivity">
 
     <TextView
         android:id="@+id/tv_title_a"
@@ -43,12 +43,12 @@
             android:textSize="12sp"/>
     </LinearLayout>
 
-    <com.butter.cookiessc.customview.DelayLoadJsWebView
+    <com.butter.cookiea.customview.DelayLoadJsWebView
         android:id="@+id/webview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="15dp"
-        android:layout_weight="1"></com.butter.cookiessc.customview.DelayLoadJsWebView>
+        android:layout_weight="1"></com.butter.cookiea.customview.DelayLoadJsWebView>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -69,7 +69,7 @@
             android:layout_alignParentTop="true"
             android:src="@drawable/ic_favorite_border_black_24dp"/>
 
-        <com.butter.cookiessc.ui.view.LikeButton
+        <com.butter.cookiea.ui.view.LikeButton
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_alignParentTop="true"

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.butter.cookiessc.ui.activity.NewActivity">
+    tools:context="com.butter.cookiea.ui.activity.NewActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
             android:textSize="18sp"/>
     </RelativeLayout>
 
-    <com.butter.cookiessc.v2.ui.view.FreeViewPager
+    <com.butter.cookiea.v2.ui.view.FreeViewPager
         android:id="@+id/vp_main"
         android:layout_width="match_parent"
         android:layout_height="0dp"

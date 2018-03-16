@@ -2,8 +2,8 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             android:background="@mipmap/bg_splash_simple"
-             tools:context="com.butter.cookiessc.ui.activity.SplashActivity">
+             android:background="@mipmap/bg_splash_kuai3"
+             tools:context="com.butter.cookiea.ui.activity.SplashActivity">
 
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,

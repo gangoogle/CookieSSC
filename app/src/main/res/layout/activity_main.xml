@@ -5,7 +5,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.butter.cookiessc.ui.activity.MainActivity"
+    tools:context="com.butter.cookiea.ui.activity.MainActivity"
     tools:layout_editor_absoluteY="25dp">
 
     <android.support.design.widget.BottomNavigationView
@@ -16,7 +16,6 @@
 
         android:layout_marginBottom="473dp"
         android:background="#e3e8ec"
-        app:layout_constraintBottom_toTopOf="@+id/iv_news"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -47,7 +46,7 @@
 
     </RelativeLayout>
 
-    <com.butter.cookiessc.customview.NoScrollViewPager
+    <com.butter.cookiea.customview.NoScrollViewPager
         android:id="@+id/view_pager"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -57,7 +56,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/navigation"
-        app:layout_constraintVertical_bias="0.0"></com.butter.cookiessc.customview.NoScrollViewPager>
+        app:layout_constraintVertical_bias="0.0"></com.butter.cookiea.customview.NoScrollViewPager>
 
 
 </android.support.constraint.ConstraintLayout>

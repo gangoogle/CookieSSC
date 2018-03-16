@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.butter.cookiessc.ui.activity.TrendDetailActivity"
+    tools:context="com.butter.cookiea.ui.activity.TrendDetailActivity"
    >
 
     <LinearLayout
@@ -17,7 +17,7 @@
             android:id="@+id/ll_status_t"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@color/colorAccent"
+            android:background="@color/cardview_dark_background"
             >
 
             <TextView
